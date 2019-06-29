@@ -1,0 +1,10 @@
+config:
+  agent_dockerfile: ./agent
+  poll_interval: 20
+  pools:
+    - pool: example
+      image: ./definitions/example
+      target_worker_count: "JOB_COUNT + 1"
+azure_devops:
+  pat: secret_here
+  url: https://dev.azure.com/thomasgassmann
