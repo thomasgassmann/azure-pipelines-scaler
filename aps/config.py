@@ -3,7 +3,7 @@ from typing import List
 from msrest.authentication import BasicAuthentication
 from azure.devops.connection import Connection
 
-with open('config.yml') as handle:
+with open('./config/config.yml') as handle:
     config = yaml.safe_load(handle)
 
 
