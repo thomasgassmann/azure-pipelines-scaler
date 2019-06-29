@@ -25,7 +25,9 @@ The `image` property is a path to a folder with a `Dockerfile`. This `Dockerfile
 
 The `target_worker_count` property determines how many build agents the queue should have. This property supports maths expressions with predefined variables. Currently there are two predefined variables (`JOB_COUNT` and `AGENT_COUNT`). In the example above `aps` would autoscale the agent pool `example` to always have at least one more build agents than there are jobs in the queue.
 
-Additionally a PAT (personal access token) and the URL to your Azrue DevOps tenant have to be specified. The PAT needs to have access to build queues and builds in order to autoscale.
+Additionally a PAT (personal access token) and the URL to your Azure DevOps tenant have to be specified. The PAT needs to have access to build queues and builds in order to autoscale.
+
+Before running `aps`, create a new directory containing the `config.yml` and a subdirectory `definitions` containing all images. Then run `aps` using the following command (adjust `/path/config`):
 
 
 ```docker
